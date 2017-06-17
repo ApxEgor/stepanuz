@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <div class="pageLeft bar">
+        <div class="carouselWrapper">
+            <div class="items oneItem">
+                <div class="itemWrapper">
+                    <div class="itemImage"><img src="{{ movie.movie_pic.url }}" alt="{{ movie.movie_name }}"></div>
+                    <div class="itemName">{{ movie.movie_name }}</div>
+                    <div class="itemName sub">{{ movie.movie_name }}</div><br>
+                    <div data-rating="5" class="itemRating">
+                      <div class="star"></div>
+                    </div>
+                    <div class="itemInfo country">Страна: <a href="#">{{ movie.country }}</a></div>
+                    <div class="itemInfo year">Год выпуска: <a href="#">{{ movie.release_date.year }}</a></div>
+                    <div class="itemInfo genre">Жанр: <a href="#">{{ movie.get_genre_display }}</a></div>
+                    <div class="itemInfo actors">Актерский состав: <a href="#">{{ movie.actors }}</a></div>
+                    <div class="itemAbout">Сюжет: {{ movie.description }}</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="itemPreview">
+                    <div class="frameWrapper">
+                        <div class="videoframe">
+                            <iframe src="{{ movie.url }}" allowfullscreen="" frameborder="0">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pageRight bar">
+          <div class="notice">
+            <div class="noticeHeader">Уведомления</div>
+            <div class="noticeText">
+              <div class="noticeName">Проекту требуются волонтеры.</div>
+              <div class="noticeInfo">Заинтересованные могут отправить сообщение в<a href="{% url 'contact-us' %}">Форме Обратной связи</a></div>
+            </div>
+            <div class="noticeText">
+              <div class="noticeName">Стол заказов</div>
+              <div class="noticeInfo">Смотрите то, что интересно Вам:
+                <form>
+                  <select required>
+                    <option>Выберите раздел</option>
+                    <option>Сериалы</option>
+                    <option>Фильмы</option>
+                    <option>Аниме</option>
+                    <option>ТВ передачи</option>
+                  </select>
+                  <input type="text" name="name" placeholder="имя" required>
+                  <input type="email" name="mail" placeholder="эл. адрес" required>
+                  <input type="text" name="content" placeholder="название" required><span>Сколько будет 24 + 5?</span>
+                  <input type="number" name="antispam" placeholder="ответ" required>
+                  <input type="submit" value="отправить">
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="scrollView">
+            <!-- VERTICAL ADVERTISEMENT WRAPPER-->
+            <div class="rec">
+              <!-- VERTICAL ADVERTISEMENT LINK--><a href="" target="_blank" class="recInner">
+                <!-- VERTICAL ADVERTISEMENT CONTENT--><img src="images/rec/drweb.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+{% endblock content %}

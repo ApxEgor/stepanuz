@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head lang="ru">
+    <!-- GENERAL PROPERTIES-->
+    <title>Медиа портал Stepan.uz</title>
+    <meta http-equiv="content-type" content="text/html" charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width">
+    <meta name="front-end developer" content="Mikhail Umarov">
+    <!-- OPEN GRAPH PROTOCOL FOR SHARING-->
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="stepan.uz">
+    <!-- SETTINGS FOR SEARCH MACHINES-->
+    <meta name="description" content="Stepan.uz">
+    <meta name="keywords" content="Stepan.uz">
+    <!-- COLOR OF TOP OF THE BROWSER ON MOBILE-->
+    <meta name="msapplication-TileImage" content="images/icons/ms-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#f60">
+    <meta name="theme-color" content="#f60">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#f60">
+    <!-- FAVICON SETTINGS-->
+    <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="manifest" href="images/icons/manifest.json">
+    <!-- MAIN STYLES ADDED HERE:-->
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+  <body>
+    <!--  GLOBAL SEARCH-->
+    <div class="globalSearch"></div>
+    <!-- NAVIGATION PANEL:-->
+    <div id="navigation">
+      <div class="wrapper"><a href="index.html" class="logotype"><span class="logo"></span><span class="stepan">tepan.uz</span></a>
+        <div class="forms">
+          <form class="search">
+            <input type="search" placeholder="Поиск" class="searchBox">
+            <input type="submit" value="" class="searchKey">
+          </form>
+          <!--.loginCenter-->
+          <!--   a.loginKey.login(href="") Войти-->
+          <!--.clear-->
+        </div>
+        <div class="menuPanel">
+          <div class="menuListWrapper"><a href="category.html" class="menuHeader">Сериалы</a>
+            <!--.menuList-->
+            <!--   a.menuHeader(href="") Новинки-->
+            <!--   a.menuHeader(href="") Популярные-->
+            <!--   a.menuHeader(href="") Зарубежные-->
+            <!--   a.menuHeader(href="") Российские-->
+            <!--   a.menuHeader(href="") Узбекские-->
+            <!--   a.menuHeader(href="") Корейские-->
+            <!--   a.menuHeader(href="") Разные-->
+            <!--   a.menuHeader(href="") Архив-->
+          </div>
+          <div class="menuListWrapper"><a href="category.html" class="menuHeader">Фильмы</a></div>
+          <div class="menuListWrapper"><a href="category.html" class="menuHeader">Аниме</a></div>
+          <div class="menuListWrapper"><a href="category.html" class="menuHeader">ТВ передачи</a></div>
+          <div class="clear"></div>
+        </div><a href=".search" class="mobileKey searchButton"></a><a href=".menuPanel" class="mobileKey"></a>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <!-- TOP SLIDER:-->
+    <div id="branding"><a href="http://stepan.uz" class="branding"><img src="images/rec/sport.jpg" alt="stepan.uz"></a><a href="http://stepan.uz" class="branding mobile"><img src="images/rec/pixland.jpg" alt="pixland.uz"></a>
+    </div>
+    <div id="page">
+      <div class="content">
+        <div class="pageLeft bar">
+          <div class="carouselWrapper">
+            <div class="searchHeader">Результаты поиска по:   "новое кино"</div>
+            <div class="carouselHeader">
+              <select class="filters type">
+                <option value="all">Все</option>
+                <option value="popular">Популярные</option>
+                <option value="new" selected>Последнее</option>
+              </select>
+              <select class="filters type">
+                <option value="all" selected>Все категории</option>
+                <option value="serials">Сериалы</option>
+                <option value="movies">Фильмы</option>
+                <option value="tv">ТВ передачи</option>
+                <option value="anime">Аниме</option>
+              </select>
+              <select class="filters genre">
+                <option value="all" selected>Все жанры</option>
+                <option value="drama">Драма</option>
+                <option value="comedy">Комедия</option>
+                <option value="action">Боевик</option>
+                <option value="detective">Детектив</option>
+              </select>
+              <select class="filters country">
+                <option value="all" selected>Все страны</option>
+                <option value="russia">Россия</option>
+                <option value="usa">США</option>
+                <option value="europe">Европа</option>
+                <option value="korean">Корея</option>
+              </select>
+              <div class="clear"></div>
+            </div>
+            <div class="items">
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/brooklyn.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Бруклин 9-9</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/elementary.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Элементарно</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/walking-dead.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Ходячие мертвецы</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/black-list.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Черный Список</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/brooklyn.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Бруклин 9-9</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/elementary.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Элементарно</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/walking-dead.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Ходячие мертвецы</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/black-list.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Черный Список</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+              <div class="clear"></div>
+              <div class="dummy"></div>
+              <!-- HORIZONTAL ADVERTISEMENT WRAPPER-->
+              <div class="rec">
+                <!-- HORIZONTAL ADVERTISEMENT LINK--><a href="" target="_blank" class="recInner">
+                  <!-- HORIZONTAL ADVERTISEMENT CONTENT--><img src="images/rec/wms.jpg" alt=""></a>
+              </div>
+              <div class="dummy"></div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/brooklyn.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Бруклин 9-9</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/elementary.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Элементарно</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/walking-dead.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Ходячие мертвецы</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/black-list.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Черный Список</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/brooklyn.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Бруклин 9-9</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/elementary.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Элементарно</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/walking-dead.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Ходячие мертвецы</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/black-list.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Черный Список</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+              <div class="clear"></div>
+              <div class="dummy"></div>
+              <!-- HORIZONTAL ADVERTISEMENT WRAPPER-->
+              <div class="rec">
+                <!-- HORIZONTAL ADVERTISEMENT LINK--><a href="" target="_blank" class="recInner">
+                  <!-- HORIZONTAL ADVERTISEMENT CONTENT--><img src="images/rec/wms.jpg" alt=""></a>
+              </div>
+              <div class="dummy"></div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/brooklyn.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Бруклин 9-9</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/elementary.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Элементарно</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/walking-dead.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Ходячие мертвецы</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/black-list.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Черный Список</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/brooklyn.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Бруклин 9-9</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/elementary.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Элементарно</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/walking-dead.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Ходячие мертвецы</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+                            <div class="carouselItem">
+                              <div class="itemWrapper">
+                                <div class="normal"><a href="item.html" class="itemImage"><img src="images/content/black-list.jpg"></a></div>
+                                <div class="darker"><a href="item.html" class="itemName">Черный Список</a>
+                                  <div data-rating="1.5" class="itemRating">
+                                    <div class="star"></div>
+                                    <div class="star full"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: США</div>
+                                    <div class="itemInfo year">Год выпуска: 2013</div>
+                                    <div class="itemInfo genre">Жанр: Драма Криминал</div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                              <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                              </div>
+                            </div>
+              <div class="clear">           </div>
+            </div>
+          </div>
+          <input type="button" value="загрузить еще" class="more">
+        </div>
+        <div class="pageRight bar">
+          <div class="notice">
+            <div class="noticeHeader">Уведомления</div>
+            <div class="noticeText">
+              <div class="noticeName">Проекту требуются волонтеры.</div>
+              <div class="noticeInfo">Заинтересованные могут отправить сообщение в<a href="contacts.html">Форме Обратной связи</a></div>
+            </div>
+            <div class="noticeText">
+              <div class="noticeName">Стол заказов</div>
+              <div class="noticeInfo">Смотрите то, что интересно Вам:
+                <form>
+                  <select required>
+                    <option>Выберите раздел</option>
+                    <option>Сериалы</option>
+                    <option>Фильмы</option>
+                    <option>Аниме</option>
+                    <option>ТВ передачи</option>
+                  </select>
+                  <input type="text" name="name" placeholder="имя" required>
+                  <input type="email" name="mail" placeholder="эл. адрес" required>
+                  <input type="text" name="content" placeholder="название" required><span>Сколько будет 24 + 5?</span>
+                  <input type="number" name="antispam" placeholder="ответ" required>
+                  <input type="submit" value="отправить">
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="scrollView">
+            <!-- VERTICAL ADVERTISEMENT WRAPPER-->
+            <div class="rec">
+              <!-- VERTICAL ADVERTISEMENT LINK--><a href="" target="_blank" class="recInner">
+                <!-- VERTICAL ADVERTISEMENT CONTENT--><img src="images/rec/drweb.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <!-- FOOTER-->
+    <div id="footer"><a href="index.html" class="logo">Stepan.uz 2017</a>
+      <div class="socials"><a href="" class="social fb"></a><a href="" class="social gp"></a><a href="" class="social ig"></a><a href="" class="social tw"></a>
+        <div class="clear"></div>
+      </div>
+      <div class="links"><a href="advertisement.html" class="link">Реклама</a><a href="contacts.html" class="link">Контакты</a></div>
+      <div class="metrics">
+        <div class="metric"><img src="images/crop/metric.jpg" alt="www.uz"></div>
+        <div class="metric"><img src="images/crop/metric.jpg" alt="ya.ru"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <!-- MAIN SCRIPT ADDED HERE:-->
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,251 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content">
+        <div class="pageLeft bar">
+                    <div class="carouselWrapper">
+                      <div class="carouselHeader">
+                        <div class="headerName">Сериалы</div>
+                        <select class="filters type">
+                          <option value="" selected disabled>Фильтр</option>
+                          <option value="all">Все</option>
+                          <option value="drama">Популярные</option>
+                          <option value="comedy">Последнее</option>
+                        </select><a href="{% url 'serials-list' %}" class="headerLink">Все Сериалы</a>
+                        <div class="clear"></div>
+                      </div>
+                      <div class="carousel">
+                          {% for serial in serials %}
+                              <div class="carouselItem">
+                            <div class="itemWrapper">
+                                <div class="normal">
+                                    <a href='{% url 'serial-detail' serial.id %}' class="itemImage">
+                                        <img src="{{ serial.movie_pic.url }}">
+                                    </a>
+                                </div>
+                                <div class="darker">
+                                    <a href={% url 'serial-detail' serial.id %} class="itemName">
+                                        {{ serial.movie_name }}
+                                    </a>
+                                  <div data-rating="1.5" class="itemRating">
+                                  <div class="star"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: {{ serial.country }}</div>
+                                    <div class="itemInfo year">Год выпуска: {{ serial.release_date.year }}</div>
+                                    <div class="itemInfo genre">Жанр: {{ serial.get_genre_display }}</div>
+                                  </div>
+                                </div>
+                            </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                            <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                          {% endfor %}
+                      </div>
+                    </div>
+
+                    <div class="carouselWrapper">
+                      <div class="carouselHeader">
+                        <div class="headerName">Фильмы</div>
+                        <select class="filters type">
+                          <option value="" selected disabled>Фильтр</option>
+                          <option value="all">Все</option>
+                          <option value="drama">Популярные</option>
+                          <option value="comedy">Последнее</option>
+                        </select><a href="{% url 'movies-list' %}" class="headerLink">Все Фильмы</a>
+                        <div class="clear"></div>
+                      </div>
+                      <div class="carousel">
+                           {% for movie in movies %}
+                        <div class="carouselItem">
+                            <div class="itemWrapper">
+                                <div class="normal">
+                                    <a href='{% url 'movie-detail' movie.id %}' class="itemImage">
+                                        <img src="{{ movie.movie_pic.url }}">
+                                    </a>
+                                </div>
+                                <div class="darker">
+                                    <a href={% url 'movie-detail' movie.id %} class="itemName">
+                                        {{ movie.movie_name }}
+                                    </a>
+                                  <div data-rating="1.5" class="itemRating">
+                                  <div class="star"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: {{ movie.country }}</div>
+                                    <div class="itemInfo year">Год выпуска: {{ movie.release_date.year }}</div>
+                                    <div class="itemInfo genre">Жанр: {{ movie.get_genre_display }}</div>
+                                  </div>
+                                </div>
+                            </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                            <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                      </div>
+                    </div>
+
+          <!-- HORIZONTAL ADVERTISEMENT WRAPPER-->
+          <div class="rec">
+            <!-- HORIZONTAL ADVERTISEMENT LINK--><a href="" target="_blank" class="recInner">
+              <!-- HORIZONTAL ADVERTISEMENT CONTENT--><img src="images/rec/wms.jpg" alt=""></a>
+          </div>
+
+                    <div class="carouselWrapper">
+                      <div class="carouselHeader">
+                        <div class="headerName">Анимэ</div>
+                        <select class="filters type">
+                          <option value="" selected disabled>Фильтр</option>
+                          <option value="all">Все</option>
+                          <option value="drama">Популярные</option>
+                          <option value="comedy">Последнее</option>
+                        </select><a href="{% url 'anime-list' %}" class="headerLink">Все Анимэ</a>
+                        <div class="clear"></div>
+                      </div>
+                      <div class="carousel">
+                          {% for anime in animes %}
+                        <div class="carouselItem">
+                            <div class="itemWrapper">
+                                <div class="normal">
+                                    <a href='{% url 'anime-detail' anime.id %}' class="itemImage">
+                                        <img src="{{ anime.movie_pic.url }}">
+                                    </a>
+                                </div>
+                                <div class="darker">
+                                    <a href={% url 'anime-detail' anime.id %} class="itemName">
+                                        {{ anime.movie_name }}
+                                    </a>
+                                  <div data-rating="1.5" class="itemRating">
+                                  <div class="star"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: {{ anime.country }}</div>
+                                    <div class="itemInfo year">Год выпуска: {{ anime.release_date.year }}</div>
+                                    <div class="itemInfo genre">Жанр: {{ anime.get_genre_display }}</div>
+                                  </div>
+                                </div>
+                            </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                            <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                      </div>
+                    </div>
+
+                    <div class="carouselWrapper">
+                      <div class="carouselHeader">
+                        <div class="headerName">ТВ передачи</div>
+                        <select class="filters type">
+                          <option value="" selected disabled>Фильтр</option>
+                          <option value="all">Все</option>
+                          <option value="drama">Популярные</option>
+                          <option value="comedy">Последнее</option>
+                        </select><a href="{% url 'tv-list' %}" class="headerLink">Все ТВ передачи</a>
+                        <div class="clear"></div>
+                      </div>
+                      <div class="carousel">
+                          {% for tv in tvs %}
+                        <div class="carouselItem">
+                            <div class="itemWrapper">
+                                <div class="normal">
+                                    <a href='{% url 'tv-detail' tv.id %}' class="itemImage">
+                                        <img src="{{ tv.movie_pic.url }}">
+                                    </a>
+                                </div>
+                                <div class="darker">
+                                    <a href={% url 'movie-detail' tv.id %} class="itemName">
+                                        {{ tv.movie_name }}
+                                    </a>
+                                  <div data-rating="1.5" class="itemRating">
+                                  <div class="star"></div>
+                                  </div>
+                                  <div class="itemAbout">
+                                    <div class="itemInfo country">Страна: {{ tv.country }}</div>
+                                    <div class="itemInfo year">Год выпуска: {{ tv.release_date.year }}</div>
+                                    <div class="itemInfo genre">Жанр: {{ tv.get_genre_display }}</div>
+                                  </div>
+                                </div>
+                            </div>
+                              <!--.itemKeys
+                              .itemKey.favovrite favorite
+                              .itemKey.watched watched
+                              .clear
+                              -->
+                            <div class="itemKeys">
+                                <div class="itemKey like">+ 300</div>
+                                <div class="itemKey dislike">- 80</div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                      </div>
+                    </div>
+
+          <!-- HORIZONTAL ADVERTISEMENT WRAPPER-->
+          <div class="rec">
+            <!-- HORIZONTAL ADVERTISEMENT LINK--><a href="" target="_blank" class="recInner">
+              <!-- HORIZONTAL ADVERTISEMENT CONTENT--><img src="images/rec/wms.jpg" alt=""></a>
+          </div>
+        </div>
+
+        <div class="pageRight bar">
+          <div class="notice">
+            <div class="noticeHeader">Уведомления</div>
+            <div class="noticeText">
+              <div class="noticeName">Проекту требуются волонтеры.</div>
+              <div class="noticeInfo">Заинтересованные могут отправить сообщение в<a href="{% url 'contact-us' %}">Форме Обратной связи</a></div>
+            </div>
+            <div class="noticeText">
+              <div class="noticeName">Стол заказов</div>
+              <div class="noticeInfo">Смотрите то, что интересно Вам:
+                <form>
+                  <select required>
+                    <option>Выберите раздел</option>
+                    <option>Сериалы</option>
+                    <option>Фильмы</option>
+                    <option>Аниме</option>
+                    <option>ТВ передачи</option>
+                  </select>
+                  <input type="text" name="name" placeholder="имя" required>
+                  <input type="email" name="mail" placeholder="эл. адрес" required>
+                  <input type="text" name="content" placeholder="название" required><span>Сколько будет 24 + 5?</span>
+                  <input type="number" name="antispam" placeholder="ответ" required>
+                  <input type="submit" value="отправить">
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="scrollView">
+            <!-- VERTICAL ADVERTISEMENT WRAPPER-->
+            <div class="rec">
+              <!-- VERTICAL ADVERTISEMENT LINK--><a href="" target="_blank" class="recInner">
+                <!-- VERTICAL ADVERTISEMENT CONTENT--><img src="images/rec/drweb.jpg" alt=""></a>
+            </div>
+          </div>
+        </div>
+{% endblock content %}

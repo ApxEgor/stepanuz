@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+      <div class="content">
+        <div class="pageLeft bar">
+          <div class="carouselWrapper">
+            <div class="carouselHeader">
+              <div style="display: block;" class="headerName">Контакты</div>
+              <div class="clear"></div>
+            </div>
+            <div class="items">
+              <div class="text">Мы всегда рады получить отклики, предложения замечания и другую информацию от своих пользователей. Для отправки своего сообщения воспользуйтесь формой обратной связи:</div>
+              <form method="post" class="contacts">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <input type="submit" name="Отправить" />
+
+                  <div class="clear"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+{% endblock content %}
+
